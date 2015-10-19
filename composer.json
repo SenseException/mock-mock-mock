@@ -1,0 +1,24 @@
+{
+    "name": "senseexception/mock-mock-mock",
+    "description": "A collection of different Mock framework examples",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Claudio Zizza",
+            "email": "claudio@budgegeria.de"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "bafs/testify": "dev-master#63e4d023a1a2527d8a80b911030558b5d71b0116@dev",
+        "mikey179/vfsStream": "^1.6",
+        "mockery/mockery": "^0.9.4",
+        "phpspec/prophecy": "^1.5",
+        "phpunit/phpunit": "4.8.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "MockMockMock\\": "src/"
+        }
+    }
+}
