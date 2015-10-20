@@ -7,7 +7,7 @@ use MockMockMock\Code\MathInterface;
 use Prophecy\Prophet;
 use Prophecy\Argument\Token\AnyValueToken;
 
-$testify = new Testify('PHPUnit Mock');
+$testify = new Testify('Prophecy Mocks');
 
 
 

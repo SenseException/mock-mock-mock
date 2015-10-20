@@ -6,7 +6,7 @@ use Testify\Testify;
 use MockMockMock\Code\MathInterface;
 use MockMockMock\Code\Math;
 
-$testify = new Testify('PHPUnit Mock');
+$testify = new Testify('PHPUnit Mocks');
 
 
 
