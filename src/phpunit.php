@@ -1,7 +1,5 @@
 <?php
 
-error_reporting(-1);
-
 require __DIR__ . '/../vendor/autoload.php';
 
 use Testify\Testify;
@@ -12,7 +10,7 @@ $testify = new Testify('PHPUnit Mock');
 
 
 
-$testify->test('Simple Mock', function(Testify $testify) {
+$testify->test('Simple Mock', function (Testify $testify) {
     /* @var PHPUnit_Framework_MockObject_Generator $mockFw */
     $mockFw = $testify->data->mockFw;
 
@@ -27,7 +25,7 @@ $testify->test('Simple Mock', function(Testify $testify) {
     $testify->assertEquals(2, $math->sum(1, 1));
 });
 
-$testify->test('Proxy Mock', function(Testify $testify) {
+$testify->test('Proxy Mock', function (Testify $testify) {
     /* @var PHPUnit_Framework_MockObject_Generator $mockFw */
     $mockFw = $testify->data->mockFw;
 
@@ -40,7 +38,7 @@ $testify->test('Proxy Mock', function(Testify $testify) {
     $testify->assertEquals(2, $math->sum(1, 1));
 });
 
-$testify->test('Mocks on Static methods', function(Testify $testify) {
+$testify->test('Mocks on Static methods', function (Testify $testify) {
 //    /* @var PHPUnit_Framework_MockObject_Generator $mockFw */
 //    $mockFw = $testify->data->mockFw;
 //
@@ -62,7 +60,7 @@ $testify->test('Mocks on Static methods', function(Testify $testify) {
 
 
 
-$testify->beforeEach(function(Testify $testify) {
+$testify->beforeEach(function (Testify $testify) {
     $testify->data->mockFw = new PHPUnit_Framework_MockObject_Generator();
 });
 
