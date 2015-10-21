@@ -16,7 +16,7 @@ The following Mocking-Frameworks are handled:
 ### Installation
 
 ``` bash
-git clone git@github.com:sebastianbergmann/phpunit.git
+git clone git@github.com:SenseException/mock-mock-mock.git
 cd mock-mock-mock
 composer.phar install
 ```
