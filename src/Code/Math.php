@@ -35,4 +35,12 @@ class Math implements MathInterface
     {
         return '+';
     }
+
+    /**
+     * @return MathInterface
+     */
+    public function getSelf()
+    {
+        return $this;
+    }
 }

@@ -11,4 +11,9 @@ interface MathInterface
      * @return int|float
      */
     public function sum($value1, $value2);
+
+    /**
+     * @return MathInterface
+     */
+    public function getSelf();
 }
