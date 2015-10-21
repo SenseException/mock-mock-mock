@@ -14,8 +14,6 @@ $testify->test('Simple Mock', function (Testify $testify) {
 
     Phake::when($math)->sum(1, 1)->thenReturn(2);
 
-    Phake::verifyNoInteraction($math);
-
     $testify->assertEquals(2, $math->sum(1, 1));
     Phake::verify($math, Phake::times(1))->sum(1, 1);
 });
