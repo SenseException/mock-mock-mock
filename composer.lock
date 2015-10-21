@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c974ecfd053ee22edabdb89fe6621cd0",
-    "content-hash": "f135ebcb319daaff0131161cc4d0fa46",
+    "hash": "c167b8909cd9e4c56030359e5228cda9",
+    "content-hash": "e2fb7b2c1c1a8adf5847a9991d683192",
     "packages": [
         {
             "name": "bafs/testify",
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/BafS/Testify.php.git",
-                "reference": "5a173af660fe3ebb8f9d4a093ef637a7f14b4066"
+                "reference": "2e96b1054b117ce713ac32d305df38bd46175ecd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BafS/Testify.php/zipball/5a173af660fe3ebb8f9d4a093ef637a7f14b4066",
-                "reference": "5a173af660fe3ebb8f9d4a093ef637a7f14b4066",
+                "url": "https://api.github.com/repos/BafS/Testify.php/zipball/2e96b1054b117ce713ac32d305df38bd46175ecd",
+                "reference": "2e96b1054b117ce713ac32d305df38bd46175ecd",
                 "shasum": ""
             },
             "require": {
@@ -40,7 +40,52 @@
                 "testing",
                 "unit"
             ],
-            "time": "2015-09-22 10:09:31"
+            "time": "2015-10-21 00:35:55"
+        },
+        {
+            "name": "bovigo/callmap",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mikey179/bovigo-callmap.git",
+                "reference": "1977f29b0eea36dc7fb84416baa2dc59e074aaed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mikey179/bovigo-callmap/zipball/1977f29b0eea36dc7fb84416baa2dc59e074aaed",
+                "reference": "1977f29b0eea36dc7fb84416baa2dc59e074aaed",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "suggest": {
+                "phpunit/phpunit": "To use argument verification",
+                "xp-framework/core": "Alternative option for argument verification"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "bovigo\\callmap\\": "src/main/php"
+                },
+                "files": [
+                    "src/main/php/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Allows to stub and mock method calls by applying a callmap.",
+            "time": "2015-10-05 16:18:01"
         },
         {
             "name": "doctrine/instantiator",
@@ -251,6 +296,64 @@
                 "testing"
             ],
             "time": "2015-04-02 19:54:00"
+        },
+        {
+            "name": "phake/phake",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mlively/Phake.git",
+                "reference": "260553214c4b1a8796bcf28c7b8db24a2b15840b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mlively/Phake/zipball/260553214c4b1a8796bcf28c7b8db24a2b15840b",
+                "reference": "260553214c4b1a8796bcf28c7b8db24a2b15840b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sebastian/comparator": "~1.1"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "doctrine/common": "2.3.*",
+                "ext-soap": "*",
+                "hamcrest/hamcrest-php": "1.1.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "doctrine/common": "Allows mock annotations to use import statements for classes.",
+                "hamcrest/hamcrest-php": "Use Hamcrest matchers."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Phake": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Lively",
+                    "email": "m@digitalsandwich.com"
+                }
+            ],
+            "description": "The Phake mock testing library",
+            "homepage": "https://github.com/mlively/Phake",
+            "keywords": [
+                "mock",
+                "testing"
+            ],
+            "time": "2015-09-03 13:05:57"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -1154,7 +1257,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "bafs/testify": 20
+        "bafs/testify": 20,
+        "bovigo/callmap": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
