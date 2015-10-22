@@ -46,9 +46,8 @@ $testify->test('Mocks on Static methods', function (Testify $testify) {
 //    $math = $mockFw->getMock(Math::class);
 //
 //    $math->expects(new PHPUnit_Framework_MockObject_Matcher_InvokedAtLeastOnce())
-//        ->method('sum')
-//        ->with(1, 1)
-//        ->willReturn(2);
+//        ->method('operator')
+//        ->willReturn('+');
 //
 //    $testify->assertEquals('+', $math->operator());
 
