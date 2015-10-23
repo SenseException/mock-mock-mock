@@ -1,6 +1,7 @@
 # Mock Mock Mock
 
 Mock Mock Mock is part of a talk about Mocking-Frameworks and provides example code for in the talk mentioned mocks.
+My slides to that talk are on [Speaker Deck](https://speakerdeck.com/senseexception/mock-mock-mock-mocking-framework).
 
 To keep the Frameworks in the foreground of the examples, the micro testing Framework Testify is used.
 
