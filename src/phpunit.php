@@ -23,6 +23,8 @@ $testify->test('Simple Mock', function (Testify $testify) {
         ->willReturn(2);
 
     $testify->assertEquals(2, $math->sum(1, 1));
+
+    $math->__phpunit_verify();
 });
 
 $testify->test('Proxy Mock', function (Testify $testify) {
@@ -30,12 +32,15 @@ $testify->test('Proxy Mock', function (Testify $testify) {
     $mockFw = $testify->data->mockFw;
 
     /* @var PHPUnit_Framework_MockObject_MockObject $math */
-    $math = $mockFw->getMock(Math::class, [], [], '', false, false, true, false, true);
+    // type, methods, arguments, mock class name, call orig. constructor, call orig. clone, call autoload, cloneArguments, callOriginalMethods, proxyTarget
+    $math = $mockFw->getMock(Math::class, [], [], '', true, false, true, false, true);
 
     $math->expects(new PHPUnit_Framework_MockObject_Matcher_InvokedAtLeastOnce())
         ->method('sum');
 
     $testify->assertEquals(2, $math->sum(1, 1));
+
+    $math->__phpunit_verify();
 });
 
 $testify->test('Mocks on Static methods', function (Testify $testify) {
@@ -50,6 +55,8 @@ $testify->test('Mocks on Static methods', function (Testify $testify) {
 //        ->willReturn('+');
 //
 //    $testify->assertEquals('+', $math->operator());
+//
+//    $math->__phpunit_verify();
 
 
     $math = new Math();
