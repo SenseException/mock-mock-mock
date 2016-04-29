@@ -13,6 +13,8 @@ The following Mocking-Frameworks are handled:
 * vfsStream
 * Phake
 * bovigo/callmap
+* php-mock (soon)
+* aspect-mock (soon)
 
 ### Installation
 
