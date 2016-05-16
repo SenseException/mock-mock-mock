@@ -1,0 +1,49 @@
+<?php
+
+namespace MockMockMock;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use AspectMock\Kernel;
+use Testify\Testify;
+use AspectMock\Test;
+use MockMockMock\Code\Math;
+
+$testify = new Testify('AspectMock');
+
+
+$testify->test('AspectMock double', function (Testify $testify) {
+    $mathMock = Test::double(Math::class, ['sum' => 0]);
+
+    $math = new Math();
+    $testify->assertSame(0, $math->sum(1, 2));
+
+    $mathMock->verifyInvokedOnce('sum', [1, 2]);
+});
+
+$testify->test('AspectMock method stub', function (Testify $testify) {
+    $mock = Test::func(__NAMESPACE__, 'time', 0);
+
+    $testify->assertSame(0, time());
+
+    $mock->verifyInvokedOnce();
+});
+
+$testify->afterEach(function () {
+    Test::clean();
+});
+
+$testify->before(function () {
+    $kernel = Kernel::getInstance();
+    $kernel->init([
+        'debug' => true,
+    ]);
+});
+
+
+
+try {
+    $testify->run();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
