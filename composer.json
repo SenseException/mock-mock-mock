@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "php": ">=5.6",
+        "php": "^5.6|^7.0",
         "bafs/testify": "dev-master#63e4d023a1a2527d8a80b911030558b5d71b0116@dev",
         "bovigo/callmap": "v1.1.0@dev",
         "mikey179/vfsStream": "^1.6",
