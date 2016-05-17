@@ -25,8 +25,25 @@ $testify->test('AspectMock method stub', function (Testify $testify) {
     $mock = Test::func(__NAMESPACE__, 'time', 0);
 
     $testify->assertSame(0, time());
+});
 
-    $mock->verifyInvokedOnce();
+$testify->test('AspectMock static method', function (Testify $testify) {
+    $math = Test::double(Math::class, ['operator' => '*']);
+
+    $testify->assertSame('*', Math::operator());
+    $math->verifyInvokedOnce('operator');
+});
+
+$testify->test('AspectMock classic mock + proxy', function (Testify $testify) {
+    $mathMock = Test::double(new Math(), ['getSelf' => null]);
+
+    // Mocked method
+    $testify->assertSame(null, $mathMock->getSelf());
+    // The real deal
+    $testify->assertSame(3, $mathMock->sum(1, 2));
+
+    $mathMock->verifyInvokedOnce('getSelf');
+    $mathMock->verifyInvokedOnce('sum', [1, 2]);
 });
 
 $testify->afterEach(function () {
@@ -37,6 +54,7 @@ $testify->before(function () {
     $kernel = Kernel::getInstance();
     $kernel->init([
         'debug' => true,
+        'appDir'    => __DIR__ . '/Code',
     ]);
 });
 
@@ -44,6 +62,6 @@ $testify->before(function () {
 
 try {
     $testify->run();
-} catch (Exception $e) {
+} catch (\Exception $e) {
     echo $e->getMessage();
 }
