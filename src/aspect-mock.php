@@ -21,8 +21,8 @@ $testify->test('AspectMock double', function (Testify $testify) {
     $mathMock->verifyInvokedOnce('sum', [1, 2]);
 });
 
-$testify->test('AspectMock method stub', function (Testify $testify) {
-    $mock = Test::func(__NAMESPACE__, 'time', 0);
+$testify->test('AspectMock function', function (Testify $testify) {
+    Test::func(__NAMESPACE__, 'time', 0);
 
     $testify->assertSame(0, time());
 });
