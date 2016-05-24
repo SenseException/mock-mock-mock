@@ -10,15 +10,15 @@
     ],
     "require": {
         "php": "^5.6|^7.0",
-        "bafs/testify": "dev-master#63e4d023a1a2527d8a80b911030558b5d71b0116@dev",
-        "bovigo/callmap": "v1.1.0@dev",
+        "bafs/testify": "dev-master",
+        "bovigo/callmap": "^2.0",
+        "codeception/aspect-mock": "^1.0",
         "mikey179/vfsStream": "^1.6",
-        "mockery/mockery": "^0.9.4",
-        "phake/phake": "v2.1.1",
-        "phpspec/prophecy": "^1.5",
-        "phpunit/phpunit": "5.2.*",
+        "mockery/mockery": "^0.9.5",
+        "phake/phake": "^2.3",
         "php-mock/php-mock": "^1.0",
-        "codeception/aspect-mock": "^1.0"
+        "phpspec/prophecy": "^1.6",
+        "phpunit/phpunit": "^5.3"
     },
     "autoload": {
         "psr-4": {
