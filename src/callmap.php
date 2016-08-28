@@ -13,7 +13,7 @@ $testify = new Testify('bovigo/callmap Mocks');
 
 $testify->test('Simple Mock', function (Testify $testify) {
     $math = NewInstance::of(MathInterface::class)
-        ->mapCalls(
+        ->returns(
             [
                 'sum' => 2,
             ]
