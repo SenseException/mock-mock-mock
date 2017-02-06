@@ -12,12 +12,12 @@
         "php": "^7.0",
         "bafs/testify": "dev-master",
         "bovigo/callmap": "^3.2",
-        "codeception/aspect-mock": "^1.0",
+        "codeception/aspect-mock": "^2.0",
         "mikey179/vfsStream": "^1.6",
-        "mockery/mockery": "^0.9.5",
+        "mockery/mockery": "^0.9.7",
         "php-mock/php-mock": "^1.0",
         "phpspec/prophecy": "^1.6",
-        "phpunit/phpunit": "^5.5",
+        "phpunit/phpunit": "^6.0",
         "phake/phake": "^2.3"
     },
     "autoload": {
