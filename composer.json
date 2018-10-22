@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "php": "^7.0",
+        "php": "^7.2",
         "bafs/testify": "^1.0",
         "bovigo/callmap": "^4.0",
         "codeception/aspect-mock": "^2.0",
@@ -17,7 +17,7 @@
         "mockery/mockery": "^1.0",
         "php-mock/php-mock": "^2.0",
         "phpspec/prophecy": "^1.6",
-        "phpunit/phpunit": "^6.4",
+        "phpunit/phpunit": "^7.4",
         "phake/phake": "^3.0"
     },
     "autoload": {
