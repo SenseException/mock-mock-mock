@@ -9,16 +9,15 @@
         }
     ],
     "require": {
-        "php": "^7.2",
+        "php": "^7.4",
         "bafs/testify": "^1.0",
-        "bovigo/callmap": "^4.0",
-        "codeception/aspect-mock": "^2.0",
-        "mikey179/vfsStream": "^1.6",
-        "mockery/mockery": "^1.0",
-        "php-mock/php-mock": "^2.0",
-        "phpspec/prophecy": "^1.6",
-        "phpunit/phpunit": "^7.4",
-        "phake/phake": "^3.0"
+        "codeception/aspect-mock": "^3.1",
+        "mikey179/vfsstream": "^1.6",
+        "mockery/mockery": "^1.4",
+        "php-mock/php-mock": "^2.2",
+        "phpspec/prophecy": "^1.11",
+        "phpunit/phpunit": "^9.3",
+        "phake/phake": "^3.1"
     },
     "autoload": {
         "psr-4": {
