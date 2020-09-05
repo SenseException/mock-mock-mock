@@ -12,7 +12,6 @@ The following Mocking-Frameworks are handled:
 * Mockery
 * vfsStream
 * Phake
-* bovigo/callmap
 * php-mock
 * aspect-mock
 
@@ -21,7 +20,7 @@ The following Mocking-Frameworks are handled:
 ``` bash
 git clone git@github.com:SenseException/mock-mock-mock.git
 cd mock-mock-mock
-composer.phar install
+composer install
 ```
 Start a webserver to run the tests in browser:
 

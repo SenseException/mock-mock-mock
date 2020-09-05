@@ -55,6 +55,7 @@ $testify->before(function () {
     $kernel->init([
         'debug' => true,
         'appDir'    => __DIR__ . '/Code',
+        'cacheDir' => __DIR__.'/../cache',
     ]);
 });
 
